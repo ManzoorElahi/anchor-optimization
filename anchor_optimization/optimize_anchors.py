@@ -21,7 +21,7 @@ state = {'best_result': sys.maxsize}
 def calculate_config(values,
                      ratio_count,
                      SIZES=[12, 24, 48, 96, 192],
-                     STRIDES=[6, 12, 24, 48, 96]):
+                     STRIDES=[8, 16, 32, 64, 128]):
 
     split_point = int((ratio_count - 1) / 2)
 
@@ -64,7 +64,7 @@ def average_overlap(values,
                     ratio_count=3,
                     include_stride=False,
                     SIZES=[12, 24, 48, 96, 192],
-                    STRIDES=[6, 12, 24, 48, 96],
+                    STRIDES=[8, 16, 32, 64, 128],
                     verbose=False,
                     set_state=None,
                     to_tuple=False,
