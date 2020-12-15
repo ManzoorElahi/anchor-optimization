@@ -152,8 +152,8 @@ def anchors_optimize(annotations,
                      objective='focal',
                      popsize=15,
                      mutation=0.5,
-                     image_min_side=800,
-                     image_max_side=1333,
+                     image_min_side=512,
+                     image_max_side=512,
                      # default SIZES values
                      SIZES=[12, 24, 48, 96, 192],
                      # default STRIDES values
