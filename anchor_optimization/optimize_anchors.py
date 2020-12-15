@@ -20,8 +20,8 @@ state = {'best_result': sys.maxsize}
 
 def calculate_config(values,
                      ratio_count,
-                     SIZES=[32, 64, 128, 256, 512],
-                     STRIDES=[8, 16, 32, 64, 128]):
+                     SIZES=[12, 24, 48, 96, 192],
+                     STRIDES=[6, 12, 24, 48, 96]):
 
     split_point = int((ratio_count - 1) / 2)
 
@@ -63,8 +63,8 @@ def average_overlap(values,
                     mode='focal',
                     ratio_count=3,
                     include_stride=False,
-                    SIZES=[32, 64, 128, 256, 512],
-                    STRIDES=[8, 16, 32, 64, 128],
+                    SIZES=[12, 24, 48, 96, 192],
+                    STRIDES=[6, 12, 24, 48, 96],
                     verbose=False,
                     set_state=None,
                     to_tuple=False,
@@ -155,9 +155,9 @@ def anchors_optimize(annotations,
                      image_min_side=800,
                      image_max_side=1333,
                      # default SIZES values
-                     SIZES=[32, 64, 128, 256, 512],
+                     SIZES=[12, 24, 48, 96, 192],
                      # default STRIDES values
-                     STRIDES=[8, 16, 32, 64, 128],
+                     STRIDES=[6, 12, 24, 48, 96],
                      include_stride=False,
                      resize=False,
                      threads=1,
